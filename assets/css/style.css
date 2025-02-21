@@ -8,8 +8,8 @@ Project: Resume Html
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --cv-primary-color:#3EAEFF;
-    --cv-secoundry-color: #3EAEFF;
+    --cv-primary-color:#0f182d;
+    --cv-secoundry-color: #0f182d;
     --cv-white-color: #ffffff;
     --cv-black-color: #000707;
     --cv-transition: all 0.3s;
