@@ -1989,6 +1989,7 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
+
 /* Portfolio Container */
 .portfolio-container {
     display: flex;
@@ -1996,6 +1997,8 @@ body {
     gap: 20px;
     padding: 40px;
     flex-wrap: wrap;
+    position: relative; /* Tambahkan ini */
+    z-index: 1; /* Pastikan container di atas elemen lain */
 }
 
 /* Portfolio Item */
@@ -2007,6 +2010,7 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1; /* Pastikan item portofolio di atas elemen lain */
 }
 
 .portfolio-item:hover {
@@ -2035,6 +2039,7 @@ body {
     height: 100%;
     background-color: rgba(62, 174, 255, 0);
     transition: background-color 0.3s ease;
+    z-index: 2; /* Pastikan overlay di atas gambar */
 }
 
 .portfolio-item:hover .overlay {
@@ -2052,6 +2057,7 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
+    z-index: 3; /* Pastikan teks di atas overlay */
 }
 
 .portfolio-item:hover .text {
