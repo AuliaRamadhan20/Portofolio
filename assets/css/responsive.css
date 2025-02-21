@@ -414,8 +414,8 @@ Max - Width Query
 /* Responsive Styles */
 @media (max-width: 1200px) {
     .portfolio-item {
-        width: 45%; /* Mengurangi lebar kotak portofolio */
-        height: 350px; /* Mengurangi tinggi kotak portofolio */
+        width: 45%; /* 2 kolom di tablet */
+        height: 350px;
     }
 
     .header {
@@ -430,8 +430,8 @@ Max - Width Query
 
 @media (max-width: 768px) {
     .portfolio-item {
-        width: 100%; /* Kotak portofolio memenuhi lebar layar */
-        height: 300px; /* Mengurangi tinggi kotak portofolio */
+        width: 100%; /* 1 kolom di mobile */
+        height: 300px;
     }
 
     .header {
@@ -452,7 +452,7 @@ Max - Width Query
 
 @media (max-width: 480px) {
     .portfolio-item {
-        height: 250px;
+        height: 250px; /* Sesuaikan tinggi untuk layar kecil */
     }
 
     .header {

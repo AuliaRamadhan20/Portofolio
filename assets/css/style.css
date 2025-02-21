@@ -1953,23 +1953,17 @@ section{
 /*Portofolio edited*/
 
 /* General Styles */
-body {
+.bodyport {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #007aff;
     color: #ffffff;
 }
 
-/* Header */
 .header {
-    /* background-color: #3EAEFF;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    display: flex;
     align-items: center;
     font-size: 36px;
     padding: 40px 0 0 0;
@@ -1985,11 +1979,6 @@ body {
     margin-right: 10px;
 }
 
-.header h2 {
-    font-size: 24px;
-    font-weight: bold;
-}
-
 /* Portfolio Container */
 .portfolio-container {
     display: flex;
@@ -1997,20 +1986,19 @@ body {
     gap: 20px;
     padding: 40px;
     flex-wrap: wrap;
-    position: relative; /* Tambahkan ini */
-    z-index: 1; /* Pastikan container di atas elemen lain */
 }
 
 /* Portfolio Item */
 .portfolio-item {
     position: relative;
-    width: 470px;
+    width: 100%; /* Default width untuk mobile */
+    max-width: 470px; /* Maksimum width untuk desktop */
     height: 400px;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1; /* Pastikan item portofolio di atas elemen lain */
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk spacing */
 }
 
 .portfolio-item:hover {
@@ -2039,7 +2027,6 @@ body {
     height: 100%;
     background-color: rgba(62, 174, 255, 0);
     transition: background-color 0.3s ease;
-    z-index: 2; /* Pastikan overlay di atas gambar */
 }
 
 .portfolio-item:hover .overlay {
@@ -2057,7 +2044,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 3; /* Pastikan teks di atas overlay */
 }
 
 .portfolio-item:hover .text {
