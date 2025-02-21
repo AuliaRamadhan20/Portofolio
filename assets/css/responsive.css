@@ -410,3 +410,66 @@ Max - Width Query
 	}
 }
 
+/* pembaharuan */
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    /* Untuk layar tablet (lebar maksimal 1200px) */
+    .portfolio-item {
+        width: 45%; /* Mengurangi lebar kotak portofolio */
+        height: 350px; /* Mengurangi tinggi kotak portofolio */
+    }
+
+    .header {
+        font-size: 28px; /* Mengurangi ukuran font header */
+        padding: 30px 0 0 0;
+    }
+
+    .text {
+        font-size: 20px; /* Mengurangi ukuran font teks */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Untuk layar tablet kecil (lebar maksimal 768px) */
+    .portfolio-item {
+        width: 100%; /* Kotak portofolio memenuhi lebar layar */
+        height: 300px; /* Mengurangi tinggi kotak portofolio */
+    }
+
+    .header {
+        font-size: 24px; /* Mengurangi ukuran font header */
+        padding: 20px 0 0 0;
+    }
+
+    .text {
+        font-size: 18px; /* Mengurangi ukuran font teks */
+        bottom: 10px; /* Menyesuaikan posisi teks */
+        left: 10px;
+    }
+
+    .portfolio-container {
+        padding: 20px; /* Mengurangi padding container */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Untuk layar ponsel (lebar maksimal 480px) */
+    .portfolio-item {
+        height: 250px; /* Mengurangi tinggi kotak portofolio */
+    }
+
+    .header {
+        font-size: 20px; /* Mengurangi ukuran font header */
+        padding: 15px 0 0 0;
+    }
+
+    .text {
+        font-size: 16px; /* Mengurangi ukuran font teks */
+        bottom: 5px; /* Menyesuaikan posisi teks */
+        left: 5px;
+    }
+
+    .portfolio-container {
+        padding: 10px; /* Mengurangi padding container */
+    }
+}
