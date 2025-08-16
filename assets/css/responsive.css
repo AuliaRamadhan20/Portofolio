@@ -1,19 +1,22 @@
 /*============================
-Min - Height Query
+    RESPONSIVE CSS - ALL DEVICES
 ============================*/
-/*@media(min-height:320px) and (max-height:650px) {
-   .cv_menus_wrapper .cv_menus li a{
 
-   }
+/* Base responsive improvements */
+* {
+    box-sizing: border-box;
 }
-*/
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 /*============================
-Min - Width Query
+    EXTRA LARGE SCREENS (1500px+)
 ============================*/
-
-@media (min-width:1500px) {
-    .cv_container{
+@media (min-width: 1500px) {
+    .cv_container {
         max-width: 1504px;
         width: 100%;
         padding-right: var(--bs-gutter-x, .75rem);
@@ -23,450 +26,876 @@ Min - Width Query
     }
 }
 
+/*============================
+    LARGE SCREENS (1200px - 1699px)
+============================*/
+@media (max-width: 1699.98px) {
+    .cv_about_content {
+        max-width: 1055px;
+    }
 
+    .cv_about_info {
+        max-width: 560px;
+    }
+
+    .cv_about_box {
+        padding: 20px 25px 20px 75px;
+    }
+
+    .cv_edu_box {
+        max-width: 454px;
+    }
+
+    .cv_gallery_img {
+        height: auto;
+    }
+}
+
+@media (max-width: 1499.98px) {
+    .cv_banner_img .bnr-line {
+        right: -148px;
+        top: -135px;
+    }
+
+    .cv_banner_img .bnr-star {
+        left: 198px;
+    }
+
+    .cv_banner_img .bnr-sqr {
+        left: 365px;
+    }
+}
 
 /*============================
-Max - Width Query
+    DESKTOP (992px - 1399px)
 ============================*/
+@media (max-width: 1399.98px) {
+    .cv_edu_box {
+        max-width: 385px;
+        padding: 20px;
+    }
 
-@media (max-width: 1700px){
+    .cv_gallery_wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-	.cv_about_content{
-		max-width: 1055px;
-
-	}
-
-	.cv_about_info{
-		max-width: 560px;
-	}
-
-	.cv_about_box{
-		padding: 20px 25px 20px 75px;
-	}
-
-	.cv_edu_box{
-		max-width: 454px;
-	}
-
-	.cv_gallery_img{
-		height: auto;
-	}
-
+    .cv_gallery_item.item-2 .cv_gallery_small {
+        flex-direction: column;
+    }
 }
 
-@media (max-width:1499.98px){
+@media (max-width: 1199.98px) {
+    /* Navigation */
+    .cv_menus_wrapper .cv_menus li a {
+        font-size: 45px;
+    }
 
-	.cv_banner_img .bnr-line {
-	    right: -148px;
-	    top: -135px;
-	}
+    /* Sections padding */
+    .cv_banner_wrapper, 
+    .cv_about_wrapper {
+        padding: 100px 0;
+    }
 
-	.cv_banner_img .bnr-star {
-	    left: 198px;
-	}
+    /* Banner */
+    .cv_banner_img::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-	.cv_banner_img .bnr-sqr {
-	    left: 365px;
-	}
+    .cv_banner_img .bnr-line {
+        right: 95px;
+    }
+
+    .cv_banner_wrapper::before {
+        background-position: bottom;
+        background-size: contain;
+    }
+
+    .cv_banner_text {
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .cv_banner_text a {
+        margin: 25px auto 40px;
+        display: block;
+        width: fit-content;
+    }
+
+    .cv_banner_box {
+        max-width: 705px;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* Header menu */
+    .cv_header_menu {
+        padding: 70px 40px 70px 90px;
+    }
+
+    /* About section */
+    .cv_about_content {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cv_about_info {
+        max-width: 100%;
+        margin-top: 30px;
+        text-align: center;
+    }
+
+    .cv_about_info .cv_about_btn {
+        padding: unset;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .cv_about_info h2 {
+        margin-left: 83px;
+    }
+
+    .cv_about_box {
+        padding: 20px 25px;
+        border-radius: 10px;
+    }
+
+    /* Headings */
+    .cv_edu_heading, 
+    .cv_do_heading, 
+    .cv_client_heading,
+    .cv_exp_heading {
+        text-align: center;
+    }
+
+    .cv_edu_heading h2, 
+    .cv_do_heading h2, 
+    .cv_client_heading h2,
+    .cv_exp_heading h2 {
+        margin-left: auto;
+    }
+
+    .cv_edu_heading p, 
+    .cv_client_heading p,
+    .cv_exp_heading p {
+        margin: 30px auto 0;
+        max-width: 100%;
+    }
+
+    .cv_edu_box {
+        max-width: 50%;
+    }
+
+    .cv_exp_info {
+        justify-content: center;
+    }
+
+    .cv_do_heading p {
+        margin: 30px auto 20px;
+    }
+
+    .cv_do_img {
+        text-align: center;
+    }
+
+    .cv_do_box {
+        padding: 30px 20px;
+    }
+
+    .cv_map_info {
+        justify-content: flex-start;
+    }
+
+    .cv_address_box {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-@media (max-width:1399.98px){
-
-	.cv_edu_box{
-		max-width: 385px;
-		padding: 20px;
-	}
-
-	.cv_gallery_wrapper {
-	    flex-wrap: wrap;
-	    justify-content: center;
-	}
-
-	.cv_gallery_item.item-2 .cv_gallery_small{
-		flex-direction: column;
-	}
-}
-
-@media (max-width:1199.98px){
-
-	.cv_menus_wrapper .cv_menus li a{
-		font-size: 45px;
-	}
-
-	.cv_banner_wrapper, .cv_about_wrapper{
-		padding: 100px 0;
-	}
-
-	.cv_banner_img::before {
-	    left: 50%;
-	    transform: translateX(-50%);
-	}
-
-	.cv_banner_img .bnr-line{
-		right: 95px;
-	}
-
-	.cv_banner_wrapper::before {	
-	    background-position: bottom;
-	    background-size: contain;
-	}
-
-	.cv_banner_text {
-	    margin-top: 30px;
-	    text-align: center;
-	}
-
-	.cv_banner_text a{
-		margin: 25px auto 40px;
-	}
-
-	.cv_banner_box{
-		max-width: 705px;
-		margin: auto;
-		text-align: center;
-	}
-
-	.cv_header_menu{
-		padding: 70px 40px 70px 90px;
-	}
-
-	.cv_about_content{
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.cv_about_info {
-	    max-width: 100%;
-	    margin-top: 30px;
-	    text-align: center;
-	}
-
-	.cv_about_info .cv_about_btn {
-	    padding: unset;
-	    justify-content: center;
-	}
-
-	.cv_about_info h2{
-		margin-left: 83px;
-	}
-
-	.cv_about_box{
-		padding: 20px 25px;
-		border-radius: 10px;
-	}
-
-	.cv_edu_heading, .cv_do_heading, .cv_client_heading {
-    	text-align: center;
-	}
-
-	.cv_edu_heading h2, .cv_do_heading h2, .cv_client_heading h2{
-		margin-left: auto;
-	}
-
-	.cv_edu_heading p, .cv_client_heading p {
-	    margin: 30px auto 0;
-	}
-	
-	.cv_edu_box{
-		max-width: 50%;
-	}
-
-	.cv_exp_info{
-		justify-content: center;
-	}
-
-	.cv_do_heading p{
-		margin: 30px auto 20px;
-	}
-
-	.cv_do_img{
-		text-align: center;
-	}
-
-	.cv_do_box{
-		padding: 30px 20px;
-	}
-
-	.cv_map_info{
-		justify-content: flex-start;
-	}
-
-	.cv_address_box {
-	    flex-direction: column;
-	    text-align: center;
-	}
-
-}
-
-@media (max-width:991.98px){
-
-	.cv_banner_img .bnr-line {
-	    display: none;
-	}
-
-	.cv_client_img{
-		padding: 35px;
-	}
-}
-
-@media (max-width:767.98px){
-
-	section{
-		padding: 50px 0;
-	}
-
-	.cv_banner_wrapper, .cv_about_wrapper, .cv_portfolio_wrapper, .cv_do_wrapper, .cv_map_wrapper {
-    	padding: 100px 0 50px;
-	}
-
-	.cv_education_wrapper {
-    	padding-bottom: 50px;
-	}
-
-	.cv_menus_wrapper .cv_menus li {
-    	margin-bottom: auto;
-	}
-
-	.cv_menus_wrapper .cv_menus li a {
-    	font-size: 36px;
-	}
-
-	.cv_menus_wrapper .cv_menus li a::before{
-		display: none;
-	}
-
-	.cv_header_menu{
-		padding: 70px 35px;
-	}
-
-	.cv_header_social ul{
-		gap: 10px;
-	}
-
-	.cv_about_img .cv_about_exp, .cv_about_img .cv_about_rating {
-	    position: relative;
-	    top: unset;
-	    left: unset;
-	    right: unset;
-	    bottom: unset;
-	}
-
-	.cv_about_experience {
-	    display: flex;
-	    gap: 20px;
-	    flex-wrap: wrap;
-	    justify-content: center;
-	    margin-top: 30px;
-	}
-
-	.cv_about_info .cv_about_btn {
-	    justify-content: center;
-	    flex-wrap: wrap;
-	}
-
-	.cv_port_tab {
-	    flex-wrap: wrap;
-	    padding: 10px;
-	    justify-content: center;
-	}
-
-	.cv_gallery_small{
-		justify-content: center;
-	}
-
-	.cv_gallery_item.item-2{
-		flex-wrap: wrap;
-		justify-content: center;
-	}
-
-	.cv_gallery_img.img-4{
-		min-width: fit-content;
-	}
-
-	.cv_gallery_img.img-1 img, .cv_gallery_img.img-2 img, .cv_gallery_img.img-5 img{
-		min-height: auto;
-	}
-
-	.cv_client_info::after, .cv_client_info::before, .cv_client_box:first-child::after{
-		display: none;
-	}
-
-	.cv_map_content iframe{
-		height: 340px;
-	}
-
-	.cv_contact_form textarea{
-		margin-top: 6px;
-	}
-}
-
-@media (max-width:575.98px){
-
-	.cv_banner_img .bnr-sqr, .cv_banner_img .bnr-star{
-		display: none;
-	}
-
-	.cv_banner_img::before {
-	    max-width: 100%;
-	    max-height: -webkit-fill-available;
-	    border-radius: 34px;
-	}
-
-	.cv_banner_text h1{
-		font-size: 40px;
-		min-height: 44px;
-	}
-
-	h2{
-		font-size: 28px;
-	}
-
-	h3 {
-    	font-size: 22px;
-	}
-
-	h4{
-		font-size: 20px;
-	}
-
-	h5{
-		font-size: 18px;
-	}
-
-	p{
-		font-size: 14px;
-	}
-
-	.cv_banner_box{
-		padding: 30px 20px;
-	}
-
-	.cv_header_menu{
-		padding: 35px;
-	}
-
-	.cv_menus_wrapper {
-	    flex-wrap: wrap;
-	    gap: 20px;
-	}
-
-	.cv_menus_wrapper .cv_menus li a{
-		font-size: 30px;
-	}
-
-	.cv_menus_wrapper .cv_menus li a::before{
-		width: 25px;
-		height: 2px;
-		left: -32px;
-	}
-
-	.cv_header_social::before{
-		display: none;
-	}
-
-	.cv_header_social ul {
-	    gap: 10px;
-	    margin-top: 20px;
-	}
-
-	.cv_header_social ul li a img{
-		max-width: 100%;
-		height: auto;
-	}
-
-	.cv_edu_heading{
-		text-align: left;
-	}
-
-	.cv_edu_info::before, .cv_edu_info::after{
-		display: none;
-	}
-
-	.cv_edu_box{
-		max-width: 100%;
-	}
-
-	.cv_exp_box{
-		padding: 20px;
-	}
-
-	.cv_award_text h1{
-		font-size: 36px;
-	}
-
-	.cv_skill_text h4{
-		font-size: 16px;
-	}
-
-	.cv_skill_text p{
-		font-size: 14px;
-	}
-}
-
-@media (max-width:349.98px){
-
-	.cv_header_menu{
-		padding: 0 15px;
-	}
-}
-
-/* pembaharuan */
-/* Responsive Styles */
-@media (max-width: 1200px) {
+/*============================
+    TABLET (768px - 991px)
+============================*/
+@media (max-width: 991.98px) {
+    .cv_banner_img .bnr-line {
+        display: none;
+    }
+
+    .cv_client_img {
+        padding: 35px;
+    }
+
+    /* Portfolio adjustments */
     .portfolio-item {
-        width: 45%; /* 2 kolom di tablet */
+        width: 48%;
+        max-width: none;
         height: 350px;
+        margin-bottom: 20px;
     }
 
-    .header {
-        font-size: 28px;
-        padding: 30px 0 0 0;
+    .portfolio-container {
+        gap: 15px;
     }
 
-    .text {
-        font-size: 20px;
+    /* Skills section */
+    .cv_skill_wrapper .row {
+        flex-direction: column-reverse;
+    }
+
+    .cv_skill_wrapper .col-lg-8 {
+        order: 2;
+    }
+
+    .cv_skill_wrapper .col-lg-4 {
+        order: 1;
+        margin-bottom: 30px;
     }
 }
 
-@media (max-width: 768px) {
+/*============================
+    MOBILE LARGE (576px - 767px)
+============================*/
+@media (max-width: 767.98px) {
+    /* General section padding */
+    section {
+        padding: 50px 0;
+    }
+
+    .cv_banner_wrapper, 
+    .cv_about_wrapper, 
+    .cv_portfolio_wrapper, 
+    .cv_do_wrapper, 
+    .cv_map_wrapper {
+        padding: 100px 0 50px;
+    }
+
+    .cv_education_wrapper {
+        padding-bottom: 50px;
+    }
+
+    /* Navigation */
+    .cv_menus_wrapper .cv_menus li {
+        margin-bottom: auto;
+    }
+
+    .cv_menus_wrapper .cv_menus li a {
+        font-size: 36px;
+    }
+
+    .cv_menus_wrapper .cv_menus li a::before {
+        display: none;
+    }
+
+    .cv_header_menu {
+        padding: 70px 35px;
+    }
+
+    .cv_header_social ul {
+        gap: 10px;
+    }
+
+    /* About section mobile */
+    .cv_about_img .cv_about_exp, 
+    .cv_about_img .cv_about_rating {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: unset;
+        margin: 10px auto;
+        max-width: 300px;
+    }
+
+    .cv_about_experience {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .cv_about_info .cv_about_btn {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    /* Portfolio tab */
+    .cv_port_tab {
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    /* Gallery */
+    .cv_gallery_small {
+        justify-content: center;
+    }
+
+    .cv_gallery_item.item-2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cv_gallery_img.img-4 {
+        min-width: fit-content;
+    }
+
+    .cv_gallery_img.img-1 img, 
+    .cv_gallery_img.img-2 img, 
+    .cv_gallery_img.img-5 img {
+        min-height: auto;
+    }
+
+    /* Client section */
+    .cv_client_info::after, 
+    .cv_client_info::before, 
+    .cv_client_box:first-child::after {
+        display: none;
+    }
+
+    /* Map */
+    .cv_map_content iframe {
+        height: 340px;
+    }
+
+    /* Contact form */
+    .cv_contact_form textarea {
+        margin-top: 6px;
+    }
+
+    /* Portfolio mobile */
     .portfolio-item {
-        width: 100%; /* 1 kolom di mobile */
+        width: 100%;
         height: 300px;
-    }
-
-    .header {
-        font-size: 24px;
-        padding: 20px 0 0 0;
-    }
-
-    .text {
-        font-size: 18px;
-        bottom: 10px;
-        left: 10px;
+        margin-bottom: 20px;
     }
 
     .portfolio-container {
         padding: 20px;
+        gap: 20px;
+    }
+
+    .portfolio-header h2 {
+        font-size: 28px;
+    }
+
+    .text {
+        font-size: 18px;
+        bottom: 15px;
+        left: 15px;
+    }
+
+    /* Education boxes */
+    .cv_edu_box {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cv_edu_info .row .col-md-6 {
+        margin-bottom: 20px;
+    }
+
+    /* Skills boxes */
+    .cv_skill_box {
+        margin-bottom: 20px;
+    }
+
+    /* Services boxes */
+    .cv_do_box {
+        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 480px) {
-    .portfolio-item {
-        height: 250px; /* Sesuaikan tinggi untuk layar kecil */
+/*============================
+    MOBILE MEDIUM (480px - 575px)
+============================*/
+@media (max-width: 575.98px) {
+    /* Banner elements */
+    .cv_banner_img .bnr-sqr, 
+    .cv_banner_img .bnr-star {
+        display: none;
     }
 
-    .header {
+    .cv_banner_img::before {
+        max-width: 100%;
+        max-height: -webkit-fill-available;
+        border-radius: 34px;
+    }
+
+    /* Typography adjustments */
+    .cv_banner_text h1 {
+        font-size: 40px;
+        min-height: 44px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
         font-size: 20px;
-        padding: 15px 0 0 0;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Banner box */
+    .cv_banner_box {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    /* Header menu */
+    .cv_header_menu {
+        padding: 35px;
+    }
+
+    /* Menu wrapper */
+    .cv_menus_wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .cv_menus_wrapper .cv_menus li a {
+        font-size: 30px;
+    }
+
+    .cv_menus_wrapper .cv_menus li a::before {
+        width: 25px;
+        height: 2px;
+        left: -32px;
+    }
+
+    /* Social media */
+    .cv_header_social::before {
+        display: none;
+    }
+
+    .cv_header_social ul {
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .cv_header_social ul li a img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Education heading */
+    .cv_edu_heading {
+        text-align: left;
+    }
+
+    .cv_edu_info::before, 
+    .cv_edu_info::after {
+        display: none;
+    }
+
+    .cv_edu_box {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    /* Experience */
+    .cv_exp_box {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Awards */
+    .cv_award_text h1 {
+        font-size: 36px;
+    }
+
+    /* Skills */
+    .cv_skill_text h4 {
+        font-size: 16px;
+    }
+
+    .cv_skill_text p {
+        font-size: 14px;
+    }
+
+    /* Portfolio mobile small */
+    .portfolio-item {
+        height: 280px;
+    }
+
+    .portfolio-container {
+        padding: 15px;
     }
 
     .text {
         font-size: 16px;
-        bottom: 5px;
-        left: 5px;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    /* About section */
+    .cv_about_info h2::before {
+        display: none;
+    }
+
+    .cv_about_info h2 {
+        margin-left: 0;
+    }
+
+    .cv_edu_heading h2::before,
+    .cv_do_heading h2::before,
+    .cv_exp_heading h2::before {
+        display: none;
+    }
+
+    .cv_edu_heading h2,
+    .cv_do_heading h2,
+    .cv_exp_heading h2 {
+        margin-left: 0;
+    }
+}
+
+/*============================
+    MOBILE SMALL (320px - 479px)
+============================*/
+@media (max-width: 479.98px) {
+    .cv_header_menu {
+        padding: 20px 15px;
+    }
+
+    .cv_banner_text h1 {
+        font-size: 32px;
+        min-height: 38px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .cv_banner_box {
+        padding: 25px 15px;
+    }
+
+    .portfolio-item {
+        height: 250px;
     }
 
     .portfolio-container {
         padding: 10px;
+    }
+
+    .text {
+        font-size: 14px;
+        bottom: 8px;
+        left: 8px;
+    }
+
+    .cv_about_box,
+    .cv_edu_box,
+    .cv_do_box,
+    .cv_skill_box {
+        padding: 15px;
+    }
+
+    .cv_address_box {
+        padding: 20px 15px;
+        margin-bottom: 15px;
+    }
+}
+
+/*============================
+    MOBILE EXTRA SMALL (below 349px)
+============================*/
+@media (max-width: 349.98px) {
+    .cv_header_menu {
+        padding: 15px;
+    }
+
+    .cv_banner_text h1 {
+        font-size: 28px;
+        min-height: 32px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .cv_banner_box {
+        padding: 20px 10px;
+    }
+
+    .portfolio-container {
+        padding: 5px;
+    }
+
+    .portfolio-item {
+        height: 220px;
+    }
+
+    .text {
+        font-size: 13px;
+        bottom: 5px;
+        left: 5px;
+    }
+}
+
+/*============================
+    IMPROVED PORTFOLIO RESPONSIVE
+============================*/
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.portfolio-header h2 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.portfolio-header h2::before {
+    content: "";
+    width: 62px;
+    height: 3px;
+    background-color: var(--cv-primary-color);
+    position: absolute;
+    top: 50%;
+    left: -83px;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(62, 174, 255, 0);
+    transition: background-color 0.3s ease;
+}
+
+.portfolio-item:hover .overlay {
+    background-color: rgba(62, 174, 255, 0.1);
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover .text {
+    opacity: 1;
+}
+
+.portfolio-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.portfolio-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*============================
+    HAMBURGER MENU STYLES
+============================*/
+.hamburger {
+    cursor: pointer;
+    display: none;
+    z-index: 102;
+}
+
+@media (max-width: 991.98px) {
+    .hamburger {
+        display: block;
+    }
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 300ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 50px;
+}
+
+.menu-open .hamRotate {
+    transform: rotate(45deg);
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 300ms, stroke-dashoffset 300ms;
+    stroke: #fff;
+    stroke-width: 6.5;
+    stroke-linecap: round;
+}
+
+.ham7 .top {
+    stroke-dasharray: 40 82;
+}
+
+.menu-open .ham7 .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+}
+
+.ham7 .middle {
+    stroke-dasharray: 40 111;
+}
+
+.menu-open .ham7 .middle {
+    stroke-dashoffset: 23px;
+}
+
+.ham7 .bottom {
+    stroke-dasharray: 40 161;
+}
+
+.menu-open .ham7 .bottom {
+    stroke-dashoffset: -83px;
+}
+
+/*============================
+    UTILITY CLASSES FOR RESPONSIVE
+============================*/
+.text-center-mobile {
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+    .text-center-mobile {
+        text-align: left;
+    }
+}
+
+.d-none-mobile {
+    display: block;
+}
+
+@media (max-width: 767.98px) {
+    .d-none-mobile {
+        display: none;
+    }
+}
+
+.d-block-mobile {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    .d-block-mobile {
+        display: block;
+    }
+}
+
+/*============================
+    IMPROVED BUTTON RESPONSIVENESS
+============================*/
+.cv_about_btn {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+@media (max-width: 575.98px) {
+    .cv_about_btn {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cv_about_btn .cv_btn {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+}
+
+/*============================
+    GRID SYSTEM IMPROVEMENTS
+============================*/
+@media (max-width: 767.98px) {
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .col-md-6,
+    .col-lg-4,
+    .col-lg-6,
+    .col-lg-8 {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
     }
 }
