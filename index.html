@@ -116,8 +116,10 @@
                     <div class="col-xl-6 col-lg-6">
                         <div class="cv_banner_text">
                             <h5>Professional Video Editor</h5>
-                            <h1>Hello! <span><img src="assets/images/hand.svg" class="img-fluid" alt="Wave"></span> I Am</h1>
-                            <h1 class="cv_profile_nameaul">Aulia Ramadhan</h1>
+                            <h1 class="cv_intro">
+                              Hello! <img src="assets/images/hand.svg" class="wave-icon" alt="Wave">
+                            </h1>
+                            <h1 class="cv_profile_nameaul">I am Aulia Ramadhan</h1>
                         </div>
                         <div class="cv_banner_box glass-effect">
                             <h4>Creative Video Editor & Designer</h4>
@@ -542,24 +544,7 @@
             document.querySelectorAll('.cv_about_box, .cv_edu_box, .cv_skill_box, .cv_do_box, .cv_address_box, .portfolio-item').forEach(el => {
                 observer.observe(el);
             });
-            
-            // Progress bar animation
-            const skillBars = document.querySelectorAll('.progress-bar');
-            const skillObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const progressBar = entry.target;
-                        const width = progressBar.style.width;
-                        progressBar.style.width = '0%';
-                        setTimeout(() => {
-                            progressBar.style.width = width;
-                        }, 200);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            skillBars.forEach(bar => skillObserver.observe(bar));
-            
+                        
             // Update copyright year
             const currentYear = new Date().getFullYear();
             const copyYearElement = document.getElementById('copyYear');

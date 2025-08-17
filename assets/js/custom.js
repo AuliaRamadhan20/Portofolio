@@ -120,33 +120,42 @@ $(document).ready(function() {
     
     // Enhanced skill bar animations
     function initSkillBars() {
-        const skillBars = $('.progress-bar');
-        
-        if ('IntersectionObserver' in window) {
-            const skillObserver = new IntersectionObserver(function(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const progressBar = $(entry.target);
-                        const targetWidth = progressBar.attr('style').match(/width:\s*(\d+%)/);
-                        
-                        if (targetWidth) {
-                            progressBar.css('width', '0%');
-                            setTimeout(() => {
-                                progressBar.animate({
-                                    width: targetWidth[1]
-                                }, 1500, 'easeOutCubic');
-                            }, 300);
-                        }
-                        skillObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            
-            skillBars.each(function() {
-                skillObserver.observe(this);
-            });
-        }
-    }
+  const $bars = $('.progress-bar');
+
+  const getTarget = ($bar) => {
+    const style = $bar.attr('style') || '';
+    let m = style.match(/width:\s*(\d+)%/i);
+    if (m) return m[1] + '%';
+    const aria = $bar.attr('aria-valuenow');
+    if (aria) return aria + '%';
+    const txt = $bar.closest('.cv_skill_box').find('.cv_skill_text p').text() || '';
+    m = txt.match(/(\d+)%/);
+    if (m) return m[1] + '%';
+    return '0%';
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    $bars.each(function(){ $(this).css('width', getTarget($(this))); });
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const $bar = $(entry.target);
+        const target = getTarget($bar);
+        $bar.css('width', '0%');
+        setTimeout(() => {
+          $bar.animate({ width: target }, 1200, 'swing');
+        }, 150);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  $bars.each(function(){ observer.observe(this); });
+}
+
     
     // Modern parallax effects
     function initParallax() {

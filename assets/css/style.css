@@ -6,6 +6,10 @@
   --cv-secondary-color: #8b5cf6;
   --cv-accent-color: #06b6d4;
 
+  --cv-spacing-section: 5rem; /* jarak antar section */
+  --cv-spacing-box: 2rem;     /* padding dalam box/kartu */
+  --cv-spacing-text: 1.25rem; /* margin bawah teks/heading */
+
   --cv-text-light: #ffffff;
   --cv-text-muted: #94a3b8;
 
@@ -136,6 +140,44 @@ body.menu-open .cv_header_menu {
   box-shadow: var(--cv-box-shadow);
 }
 
+/*Name*/
+.cv_intro {
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* jarak teks & ikon */
+}
+
+.cv_intro .wave-icon {
+  width: 64px;
+  height: auto;
+  display: inline-block;
+  animation: wave 2s infinite ease-in-out;
+  transform-origin: 70% 70%; /* pusat rotasi di "pergelangan" */
+}
+
+/* Animasi tangan melambai */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.cv_profile_nameaul {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--cv-primary-color), var(--cv-secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0.5rem;
+}
+
+
 /* Buttons */
 .cv_btn {
   display:inline-block;
@@ -236,4 +278,22 @@ body.menu-open .cv_header_menu {
   text-align:center;
   font-size: 0.9rem;
   color: var(--cv-text-muted);
+}
+
+/* =========================
+   Skills - Progress Bar
+========================= */
+/* Track */
+.progress { 
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+
+/* Fill */
+.progress-bar {
+  background: linear-gradient(90deg, var(--cv-primary-color), #7c3aed);
+  transition: width 1.2s ease;
+  will-change: width;
 }
